@@ -7,16 +7,6 @@ body {
     font-size: 18pt;
 }
 
-#title {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15vw;
-    font-weight: bold;
-    color: #609aff;
-    text-align: center;
-    width: 100%;
-    padding-top: 40vh;
-    margin: 0;
-}
 h1 {
     font-family: 'Open Sans';
     font-size: 36px;
@@ -48,4 +38,34 @@ a {
 .section-text {
     margin: auto;
     padding: 20px
+}
+
+#title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15vw;
+    font-weight: bold;
+    color: #609aff;
+    text-align: center;
+    width: 100%;
+    padding-top: 40vh;
+    margin: 0;
+}
+
+#about {
+    background-color: white;
+    padding-top: 100px
+}
+
+#coding {
+    background-color: #FFA900
+}
+
+#other {
+    background-color: #609AFF
+}
+
+#contact {
+    background-color: black;
+    color: white;
+    padding-bottom: 100px;
 }
