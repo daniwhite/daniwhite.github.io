@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,7 +56,7 @@
      transform="translate(0,-208.36457)">
     <g
        id="g6056"
-       transform="matrix(0.99144564,0,0,0.99760295,-29.047847,21.215284)">
+       transform="matrix(-0.99144564,0,0,0.99760295,171.92332,21.215284)">
       <path
          inkscape:connector-curvature="0"
          id="path5993"
