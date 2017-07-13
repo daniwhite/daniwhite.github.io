@@ -14,8 +14,8 @@ body {
     color: #609aff;
     text-align: center;
     width: 100%;
-    margin-top: 40vh;
-    margin-bottom: 0;
+    padding-top: 40vh;
+    margin: 0;
 }
 h1 {
     font-family: 'Open Sans';
@@ -24,7 +24,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: color:#609aff;
 }
 
 .nav {
