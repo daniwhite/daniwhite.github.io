@@ -26,18 +26,23 @@ a {
 }
 
 .section {
-    padding: 10px 20% 10px 20%;
+    padding: 10px 20% 40px 20%;
 }
 
 .subsection {
     display: -webkit-flex;
     display: flex;
-    margin-bottom: 100px;
+    flex-wrap: wrap;
+    max-width: fit-content;
 }
 
-.section-text {
+.subsection-item {
     margin: auto;
-    padding: 20px
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 200px;
+    flex-basis:0;
+    flex-grow:1
 }
 
 #title {
