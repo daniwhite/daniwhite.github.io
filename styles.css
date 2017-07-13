@@ -4,6 +4,7 @@ body {
     font-family: 'Source Sans Pro', serif;
     margin: 0px;
     background-image: url("img/twinkle.svg");
+    font-size: 18pt;
 }
 
 #title {
@@ -16,8 +17,9 @@ body {
     margin-top: 15%;
     margin-bottom: 0;
 }
-h2 {
-    font-family: 'Open Sans'
+h1 {
+    font-family: 'Open Sans';
+    font-size: 36px;
 }
 
 a {
@@ -30,10 +32,19 @@ a {
     width: 100%;
     color: black;
     margin-top: 0px;
-    font-size: 16px;
     background-color: white;
 }
 
 .section {
-    padding: 10px 25% 10px 25%;
+    padding: 10px 20% 10px 20%;
+}
+
+.subsection {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.section-text {
+    margin: auto;
+    padding: 20px
 }
