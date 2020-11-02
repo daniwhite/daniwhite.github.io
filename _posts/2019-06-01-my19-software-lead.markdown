@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Electric Racecar Launch Control"
-date:   2020-06-01 10:04:47 -0500
-description: "My main technical resposiblity on my FSAE team for our MY20 vechicle was launch control, a control algorithm for preventing tire slip when the driver floors the accelerator at the beginning of the Acceleration Event."
+title:  "MIT Motorsports Software Lead"
+date:   2019-06-01 10:00:00 -0500
+description: "For my electric racecar's MY19 vehicle, I was Software Lead (part of the exec team) and in charge for integrating all software in the car's embedded system."
 categories: jekyll update
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
