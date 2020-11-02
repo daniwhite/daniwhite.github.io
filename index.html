@@ -21,7 +21,10 @@ layout: default
             <h2>
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
-            {{ post.description }}
+            <p>{{ post.description }}</p>
+            <p>
+                <img src={{ post.img }}>
+            </p>
         </li>
         {% endfor %}
     </ul>
