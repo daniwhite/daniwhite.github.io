@@ -1,26 +1,31 @@
 ---
 layout: post
-title:  "Electric Racecar Vehicle Control Unit (VCU)"
+title:  "Electric Racecar Vehicle Control Unit"
 date:   2019-06-01 12:00:00 -0500
 description: "For my electric racecar's MY19 vehicle, I was Software Lead (part of the exec team) and in charge for integrating all software in the car's embedded system."
 categories: jekyll update
+img: "/photos/VCU.png"
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+<center>
+    <i>The vehicle control unit, partially attached to the vehicle:</i>
+    <p><img src="/photos/VCU.png"></p>
+</center>
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+My primary technical project on the Model Year 2019 (MY19) vehicle was the C software for the vehicle control unit (VCU). The VCU is the most complex board on the car and handles the vehicle state machine, the  vehicle controls, and the CAN bus data logging.
 
-Jekyll also offers powerful support for code snippets:
+The vehicle state machine is the core function of the VCU. Many steps are required to safely take the vehicle from the point when the low voltage system turns on to the point when the motor is allowed to apply torque; the VCU enforces that safe start up sequence and also handles any faults the vehicle may experience.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Controls software also operates on the VCU. To see more about what that entails, see [my page about controls on the MY20 vehicle](/jekyll/update/2020/06/01/my20-control-lead.html).
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+The previous vehicle before MY19 was the first to implement full onboard CAN data logging, but for MY19 we wanted to move it onboard the VCU to allow the VCU to log internal signals without burdening the CAN bus with additional signals. The VCU logs all CAN data recieves to an SD card, which we then can parse and use for debugging and data analysis. 
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Key changes I implement on the VCU
+compared with previous years include the follows:
+* Refactored state machine code to be easier to understand and to adhere to a documented state
+machine diagram
+* Implemented on STM32 F4-series MCU (previous version use STM32 F2-series)
+* SD card data logging moved from separate logger board to VCU
+* FreeRTOS used to implement threading (previous versions were bare metal)
+* Local unit testing (i.e., not cross compiled and able to be run without hardware)
+
+
