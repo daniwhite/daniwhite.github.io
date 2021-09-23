@@ -1,10 +1,25 @@
 ---
 layout: post
-title:  "MIT Motorsports Software Lead"
+title:  "MEng Research: Nonprehensile Paper Manipulation"
 date:   2021-06-01 10:00:00 -0500
 description: "My MEng research focuses on the nonprehensile manipulation of deformable objects."
 categories: jekyll update
 img: "/photos/panda_hinge.png"
 ---
+
+The goal of my thesis project is to fold a piece of paper using a robotic arm without grasping it. The diagram below illustrates the task with a point manipulator:
+![Unfolded and foled configurations](/photos/unfolded_folded.png)
+
+To make the task feasible with nonprehensile manipulation, the paper is fixed on one edge and hanging over a ledge.
+
+My high level approach is:
+1. Decompose the controller into tangent and normal directions relative to the papers surface
+2. Track a desired position relative to the paper's edge in the tangent direction
+3. Exert a desired force in the normal direction
+
+Conceptually, it is similar to hybrid-force position control, but accounts for the contact dynamics, movements of the controller's reference frame as the paper and manipulator move, and the finite forces the paper may exert back on the manipulator. To model the paper, I use the rigid body dynamics from Drake and approximate the paper as a series of rigid links connected by torsional springs and dampers. Design decisions I am still investigating include how much state feedback to include and whether to incorporate more sophisticate control techniques, such as adaptive control, to account for parameter uncertainties. To physically test the system, I will use the Franka Emika Panda arm.
+
+The screenshot below shows a recent simulation with the Panda arm folding a (very simple) model of the paper:
 ![Screenshot of the Drake simulation with the Panda arm folding a simplified paper model](/photos/panda_hinge.png)
-Under construction
+
+For more information, my thesis proposal goes into much greater detail and summarizes the state of the project as of May 2021.
