@@ -8,7 +8,7 @@ img: "/photos/panda_hinge.png"
 ---
 
 The goal of my thesis project is to fold a piece of paper using a robotic arm without grasping it. The diagram below illustrates the task with a point manipulator:
-![Unfolded and foled configurations](/photos/unfolded_folded.png)
+![Unfolded and folded configurations](/photos/unfolded_folded.png)
 
 To make the task feasible with nonprehensile manipulation, the paper is fixed on one edge and hanging over a ledge.
 
@@ -22,4 +22,4 @@ Conceptually, it is similar to hybrid-force position control, but accounts for t
 The screenshot below shows a recent simulation with the Panda arm folding a (very simple) model of the paper:
 ![Screenshot of the Drake simulation with the Panda arm folding a simplified paper model](/photos/panda_hinge.png)
 
-For more information, my thesis proposal goes into much greater detail and summarizes the state of the project as of May 2021.
+For more information, my <a href="/documents/thesis_proposal.pdf">thesis proposal</a> goes into much greater detail and summarizes the state of the project as of May 2021.
